@@ -1,0 +1,21 @@
+name: poliastro36
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python>=3.6
+- jupyter
+- notebook
+- docutils
+- markdown
+- sqlite
+- unidecode
+- blinker
+- pytz
+- werkzeug
+- itsdangerous
+- nodejs
+- pip:
+  - pelican
+  - ghp-import
+  - isso

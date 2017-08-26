@@ -1,0 +1,19 @@
+language: python
+python:
+- '3.6'
+branches:
+  only:
+  - sources
+env:
+  global:
+  - secure: R8WjKz2VxMlEl9UA6A495swzX+iF5wcFBKEkuU8RZczxTtiaQcQOah7QylnWGL9IHeqrYjWE6PO66BSzfPlMDPZZc+K7nUvBND8RC2Zlu5vw2ChNjm6ZIPIPDixCyZNT86C5DrbfWvIUA1pP9HK81QMVMMxxvGyiF1BrAy/ZRc8=
+before_install:
+- wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+- bash miniconda.sh -b -p $HOME/miniconda
+- export PATH="$HOME/miniconda/bin:$PATH"
+- conda config --set always_yes yes --set changeps1 no
+- conda env create -q -f environment.yml -n test-environment
+- source activate test-environment
+install: true
+script:
+- make publish-to-github-force

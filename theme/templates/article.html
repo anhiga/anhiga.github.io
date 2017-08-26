@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block headerimg %}{% if article.headerimg %}{{ article.headerimg }}{% else %}{{ DEFAULT_HEADER_BG }}{% endif %}{% endblock %}
+
+{% block content %}
+
+{% if article.translations %}
+    <ul class="active" style="padding-left: 10px;float: left;color: #777">
+        Also available in:
+    </ul>
+    {% for lang_url in article.translations %}
+        <ul class="active" style="padding-left: 20px;float:left;">
+        <a href={% if not lang_url.in_default_lang %}"{{ SITEURL }}/{{ lang_url.slug }}-{{ lang_url.lang }}"
+            {% elif article %}"{{ SITEURL }}/{{ lang_url.url }}"
+            {% endif %} title="{{ lang_url.lang }}">{{ lang_url.lang }}</a>
+        </ul>
+    {% endfor %}
+    <!-- separator -->
+    <li style="list-style-type:none; background-color: white; padding: 1px;">&nbsp</li>
+{% endif %}
+
+<div class="container post">
+    <article>
+        <header>
+            <h1>{{ article.title }}</h1>
+            <div class="meta">
+                <time datetime="article.date.isoformat()" pubdate>{{ article.locale_date }}</time>
+                <address class="vcard author">By
+                {% set comma = joiner(",") %}
+                {% for author in article.authors %}
+                    {{ comma() }}<a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                {% endfor %}
+                </address>
+            </div>
+        </header>
+
+        <div class="article_content">
+            {{ article.content }}
+        </div>
+
+        <div class="meta">
+            <div class="tags">
+                {% for tag in article.tags %}
+                    <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </article>
+
+  <!-- {% include '_includes/isso_thread.html' %} -->
+
+</div>
+
+<style type="text/css">
+{% include 'ipynb.css' %}
+</style>
+
+{% endblock %}
