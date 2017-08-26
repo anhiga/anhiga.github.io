@@ -7,8 +7,8 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-# SITEURL = 'http://poliastro.github.io'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'http://poliastro.github.io'
+# SITEURL = 'http://localhost:8000'
 RELATIVE_URLS = False
 
 SHOW_FEED = True
