@@ -69,8 +69,7 @@ ISSO_HOST = 'localhost:1234'
 
 ENABLE_MATHJAX = True
 
-STATIC_PATHS = ['images', 'figures', 'videos', 'downloads', 'favicon.ico', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+STATIC_PATHS = ['images', 'figures', 'videos', 'downloads']
 
 # Footer info
 
