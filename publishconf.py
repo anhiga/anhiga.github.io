@@ -7,7 +7,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://anhiga.github.io'
+SITEURL = 'https://blog.anhiga.me'
 # SITEURL = 'http://localhost:8000'
 RELATIVE_URLS = False
 

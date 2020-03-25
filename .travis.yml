@@ -6,7 +6,7 @@ branches:
   - sources
 env:
   global:
-  - secure: QL7ERoqFpRBcM/sJZBXBLVqNXXlhpAWDM1Tmw+x7oD9rZbDPPeP4qBR/H+zb6PljnkTsoPRhd7DjirtxZXDBJEZ2ylekjq05MmiVsZLtOcqskR7Egk5NegAOBG5umFRZCweJC7WQkc6ynS4hTYs/kZoLKpuDLAuWSz4DL7Si8ydSiP7CHSRqQljnyGKfxDmK9PBrNbiIyI+onFz0XnrnMAQZIBuQ1p++/2WWdjZrVaW/KIBrDl9cpu5FR7tg43ygRmVbf5dkxKTH4CY3KmSPKApppcDQV/BhDv0p8+Sqxi9MwLjKjVg/CpVjznnlyWDLkCJD8GzjJtxmymiC0tznavo1GRhofP4XTPir9kV4tSCncYXDgsH42NqgLN+cxTEQZ160juCBKjU9ixD9wzzPwWj5P3U2nDmtFJx8aDnKO4AWOVzjT9TaW1+XOLpxVqokMc7aSunwCjzDK0Y8iWdDs6kFDYX7drSelqMpW5lvRyakxNM6wbrywFwmylwkH235qbQnv0L1jKnXgo8qpXjSIcPb3jLKmBGSYB1R9VGuTqoxDlvcWniqSC5d7ZwBaRrDZmH4IIZwU2IgQ1JCtM4+wSrTdHbsfrUgeKsDxHcws8OAxNTmUtSOKGOR6zAnFU/cHKA2tIMUTCwR9UD6dzVYyPEXWOa4qMrv12rLQLnonIc=
+    secure: ipjCQT5XOntCFX91qX0hNteA4d+CAihqGRe6GMKjqToOjaVoQJ86iEZLZF61vE90VngeaUeiIqpSRg2JySMJLzYhBCobqt3dLgQ1vk9+QpJ7AC9oiB5YkDm+TyWdoabb8zr7wFgjf4HxpeYc8nv5NNoRpvxzS1Rrry+O304HVu9kiESqnBKVF3DrYJa4fCem+oyqZW5ZbioYTP6Ie1MkFvCWDcTc1TRr+9BTw5QvyschISCPW5Q73io2tsjYMkEJF5bilqKfhaQ5HKe/Hl2msroT5NJJAmA0ppMRhtzYCKZjdRquGe9ATkabCMRHZ8SQFQ82X5+7C89Vlkn4NIxAiESBjX1G1DWDEirPS/5o8e6r2gGeFnUjiqZb0Q4J2AEfJyszbyGPahHUYpdctj+d/LJ6HGqZzk9FXPFxNECYFb9xT/BRawSn14MrC9eG12NzOX4IUB1pG6don1pTXU4QJESKYfVHWfFIXI8xq55ItywfpsYDvadEctIWofhpV6ZKiaFndEJqVFp1l0KX6OCq+FHsfsztLEkh5cRlH+KyInGjscGOFF+6YU1i+gQ/k7HYg1VR5wX46QP1ipgrjqHEiSLyO85IK4x/KTBRWso86/PFWlRRpu4aj5p48nSlXbHOT6x2eA8QXNclRVRGMZ0DI238yb6JKs9+2bUA3UO2zpY=
 before_install:
 - pip install pelican markdown ipython notebook
 install: true
@@ -15,8 +15,8 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  local_dir: 'output'
+  github_token: "$GH_TOKEN"
+  local_dir: output
   target_branch: master
   on:
     branch: sources

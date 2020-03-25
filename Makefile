@@ -25,7 +25,7 @@ CLOUDFILES_CONTAINER=my_cloudfiles_container
 
 DROPBOX_DIR=~/Dropbox/Public/
 
-GITHUB_PAGES_REMOTE=https://${GH_TOKEN}@github.com/poliastro/poliastro.github.io.git
+GITHUB_PAGES_REMOTE=https://${GH_TOKEN}@github.com/anhiga/anhiga.github.io.git
 GITHUB_PAGES_BRANCH=master
 
 GIT_COMMIT_HASH = $(shell git rev-parse HEAD)

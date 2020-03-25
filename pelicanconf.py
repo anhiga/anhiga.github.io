@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-AUTHOR = 'poliastro developer team'
-SITENAME = 'poliastro'
-SITESUBTITLE = u'poliastro website'
-SITEURL = ''
+AUTHOR = 'Antonio Hidalgo'
+SITENAME = 'blog'
+SITESUBTITLE = u"anhiga's blog"
+SITEURL = 'blog.anhiga.me'
 PATH = 'content'
 TIMEZONE = 'Europe/Madrid'
 DEFAULT_LANG = 'en'
@@ -59,9 +59,9 @@ NOTEBOOK_DIR = 'downloads/notebooks'
 # THEME SETTINGS
 THEME = './theme/'
 
-ABOUT_PAGE = '/pages/about-poliastro.html'
+ABOUT_PAGE = None
 #TWITTER_USERNAME = 'poliastro'
-GITHUB_USERNAME = 'poliastro'
+GITHUB_USERNAME = 'anhiga'
 SHOW_ARCHIVES = True
 SHOW_FEED = False  # Need to address large feeds
 
@@ -73,5 +73,5 @@ STATIC_PATHS = ['images', 'figures', 'videos', 'downloads']
 
 # Footer info
 
-LICENSE_URL = "https://github.com/poliastro/poliastro.github.io-source/blob/master/LICENSE"
+LICENSE_URL = "https://github.com/anhiga/anhiga.github.io-source/blob/master/LICENSE"
 LICENSE = "CC-BY for content and MIT for code"
